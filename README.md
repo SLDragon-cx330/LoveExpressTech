@@ -13,7 +13,7 @@
 
 ## 🌸 如何使用表白系列？
 
-1. **访问项目链接**：点击这里 👉 [表白系列](https://sldragon-cx330.github.io/LoveExpressTech/表白系列.html)，探索各种表白方式的魅力。
+1. **访问项目链接**：点击这里 👉 [表白系列]https://sldragon-cx330.github.io/LoveExpressTech/表白系列.html)，探索各种表白方式的魅力。
 
 2. **选择你喜欢的样式**：从多种可爱的样式中选择一个，让你的表白变得与众不同。
 
