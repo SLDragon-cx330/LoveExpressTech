@@ -15,9 +15,10 @@
 
 在表白系列中，你将发现更多精彩的项目，每个项目都是一个独特的表白方式，为你的爱情故事增色不少：
 
-### 🚀  [爱心表白](https://sldragon-cx330.github.io/LoveExpressTech/表白系列.html)
+### 🚀  [爱心表白](https://sldragon-cx330.github.io/LoveExpressTech/爱心表白/爱心表白.html)
 
 在这个项目中，我们引入了......（在此介绍表白程序 A 的特点和亮点）
+
 
 ### 🎨 [在更新中。。。](链接到表白程序 B)
 
