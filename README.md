@@ -21,6 +21,10 @@
 
 ![爱心表白系列图片展示](https://sldragon-cx330.github.io/LoveExpressTech/爱心表白/微信截图_20230822100107.png)
 
+### 🌸 [适合自我介绍的示爱代码](https://sldragon-cx330.github.io/LoveExpressTech/适合自我介绍的示爱代码/适合自我介绍的示爱代码.html)
+
+通过动态展示的方式，介绍自己❤️
+
 ### 🎨 还在持续更新中
 
 期待您的Star✨我们将持续更新！
