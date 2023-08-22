@@ -17,8 +17,9 @@
 
 ### 🚀  [爱心表白](https://sldragon-cx330.github.io/LoveExpressTech/爱心表白/爱心表白.html)
 
-在这个项目中，我们引入了......（在此介绍表白程序 A 的特点和亮点）
+在这个项目中，我们写入爱心直接展示你的爱意。
 
+![爱心表白系列图片展示](https://sldragon-cx330.github.io/LoveExpressTech/爱心表白/微信截图_20230822100107.png)
 
 ### 🎨 [在更新中。。。](链接到表白程序 B)
 
