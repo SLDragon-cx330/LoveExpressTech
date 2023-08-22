@@ -24,6 +24,7 @@
 ### 🌸 [适合自我介绍的示爱代码](https://sldragon-cx330.github.io/LoveExpressTech/适合自我介绍的示爱代码/适合自我介绍的示爱代码.html)
 
 通过动态展示的方式，介绍自己❤️
+[点击](https://sldragon-cx330.github.io/LoveExpressTech/适合自我介绍的示爱代码/适合自我介绍的示爱代码.html)
 
 ### 🎨 还在持续更新中
 
