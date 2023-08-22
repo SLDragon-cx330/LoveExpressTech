@@ -1,0 +1,3 @@
+ <div id="snow-container"></div>
+    <div class="heart"></div>
+    <div id="timeElapsed"></div>

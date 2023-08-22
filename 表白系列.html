@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌈 Happy Qixi 🌈</title>
+    <!-- Css link -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* styling the code editor */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffecf0; /* Soft pink background */
+    overflow-x: hidden;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Cute font */
+
+}
+
+nav {
+    background-color: #ff7eb9; /* Pinkish header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ffc0cb; /* Lighter pink border bottom */
+
+}
+
+.editor {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 100px); /* Adjusted for header and footer */
+    padding-bottom: 60px; /* Space for footer */
+}
+
+.editor textarea {
+    width: 39%;
+    height: 30%;
+    position: absolute;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #ffc0cb; /* Light pink borders */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff9fb; /* Lighter pink background */
+}
+
+.editor #html-code {
+    top: 0;
+    left: 1%;
+}
+
+.editor #css-code {
+    top: 35%;
+    left: 1%;
+}
+
+.editor #js-code {
+    bottom: 0;
+    left: 1%;
+}
+
+.editor #output {
+    position: absolute;
+    top: 0;
+    right: 3%;
+    width: 55%; /* Adjusted width */
+    height: 100%;
+    background-color: #fffdfd;
+    border: 2px solid #ffc0cb; /* Light pink border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    overflow: auto; /* Scroll if content overflows */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.editor .heading {
+    position: absolute;
+    color: #ff7eb9; /* Pink heading color */
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+    background-color: #fff9fb; /* Lighter pink background for heading */
+    border-radius: 10px; /* Rounded heading background */
+    border: 2px solid #ffc0cb; /* Light pink heading border */
+    z-index: 1; /* Bring headings to front */
+}
+
+.html {
+    top: -46px;
+    left: 10%;
+    margin: 20px;
+}
+
+.css {
+    bottom: 65%;
+    left: 12%;
+}
+
+.js {
+    bottom: 30%;
+    left: 10%;
+}
+
+.output {
+    right: 25%;
+    top: -25px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #ff7eb9; /* Pink footer color */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>🌈 Happy Qixi 🌈</h1>
+    </nav>
+    <div class="editor">
+        <h2 class="heading html">✨ HTML ✨</h2>
+        <!-- Html block -->
+        <textarea id="html-code" placeholder="Write HTML code here ..."></textarea>
+       
+        <h2 class="heading css">✨ CSS ✨</h2>
+        <!-- CSS block -->
+        <textarea id="css-code" placeholder="Write CSS code here ..."></textarea>
+        
+        <h2 class="heading js">✨ JavaScript ✨</h2>
+        <!-- JavaScript block -->
+        <textarea id="js-code" placeholder="Write JavaScript code here ..."></textarea>
+        
+        <h2 class="heading output">✨ OUTPUT ✨</h2>
+        <!-- Output block -->
+        <iframe id="output"></iframe>
+    </div>
+   
+    <footer>Your friend, the light of destiny, wish you all a happy Qixi ❤️</footer>
+
+    <!-- JavaScript link -->
+   <script src="script.js" type="text/javascript"></script>
+    <script>
+// script.js
+
+   // Adding functionality
+        function run() {
+            let htmlCode = document.querySelector(".editor #html-code").value;
+            let cssCode =
+                "<style>" + document.querySelector(".editor #css-code").value + "</style>";
+            let jsCode = document.querySelector(".editor #js-code").value;
+            let output = document.querySelector(".editor #output");
+
+            output.contentDocument.body.innerHTML = htmlCode + cssCode;
+            output.contentWindow.eval(jsCode);
+        }
+        
+        document.querySelector(".editor #html-code").addEventListener("keyup", run);
+        document.querySelector(".editor #css-code").addEventListener("keyup", run);
+        document.querySelector(".editor #js-code").addEventListener("keyup", run);
+
+
+ // Load text content into textareas on page load
+    window.onload = function() {
+        loadTextFile('index.txt', '.editor #html-code');
+        loadTextFile('css.txt', '.editor #css-code');
+        loadTextFile('js.txt', '.editor #js-code');
+        run(); // Run the code after loading content
+    };
+
+    function loadTextFile(file, textareaSelector) {
+        const textarea = document.querySelector(textareaSelector);
+        fetch(file) // Load text file
+            .then(response => response.text()) // Convert response to text
+            .then(textContent => {
+                typeText(textarea, textContent); // Type the text into the textarea
+            })
+            .catch(error => console.error(`Error loading ${file} content:`, error));
+    }
+
+    function typeText(element, text) {
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < text.length) {
+                element.value += text[index];
+                index++;
+                element.scrollTop = element.scrollHeight; // Scroll to the bottom
+            } else {
+                clearInterval(interval); // Stop typing
+            }
+        }); // Adjust typing speed (milliseconds per character)
+    }
+
+    </script>
+</body>
+</html>

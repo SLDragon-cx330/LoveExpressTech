@@ -1,0 +1,111 @@
+     body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+			 background-color: #FCE8F8;
+        }
+
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .heart {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            animation: heartbeat 1s infinite;
+            transform-origin: center center;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            background-color: red;
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            top: 0;
+        }
+
+        .heart:before {
+            left: 100px;
+            width: 100px;
+            height: 160px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart:after {
+            left: 0;
+            width: 100px;
+            height: 160px;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        #timeElapsed {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes falling {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .sakura {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 40px;
+            height: 40px;
+            background-image: url('https://www.unicode.org/emoji/charts/full-emoji-list.html#1f338'); /* 🌸的Unicode转义序列 */
+            background-size: cover;
+            animation: falling linear infinite;
+            animation-duration: 10s;
+        }
